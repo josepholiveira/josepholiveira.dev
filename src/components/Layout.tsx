@@ -12,7 +12,6 @@ interface Props extends PropsSEO {
 const Layout: React.FC<Props> = ({ children, ...rest }) => {
   const { asPath } = useRouter();
 
-
   return (
     <>  
       <SEOComponent {...rest} url={asPath} />

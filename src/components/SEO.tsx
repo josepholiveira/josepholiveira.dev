@@ -23,7 +23,7 @@ const SEO: React.FC<PropsSEO> = ({
   const pageTitle = title || `${titlePrefix} | Joseph Oliveira`;
   const pageUrl = url ? `${siteUrl}${url}` : siteUrl;
 
-  const pageImage = `https://josepholiveira.dev/${image}`;
+  const pageImage = `/${image}`;
 
   const pageDescription =
     description || `O portfólio de um desenvolvedor autodidata, instrutor e lifelong learner apaixonado por React, React Native, Node.js e todo o ecossistema por volta dessas tecnologias.`;

@@ -12,9 +12,7 @@ import Footer from '../components/Footer';
 
 export default function App() {
   return (
-    <Layout>
-      <SEO titlePrefix="Home" />
-
+    <Layout titlePrefix="Home">
       <Presentation />
       <About />
       <Projects />
