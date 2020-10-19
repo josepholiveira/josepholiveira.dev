@@ -36,7 +36,7 @@ export default function Presentation() {
               aria-label="Scrolldown"
               href="/#about"
             >
-              <img src={ArrowDown} align="middle" alt="Arrow Down" />
+              <img src={ArrowDown} alt="Arrow Down" />
             </ScrollButton>
           </div>
       </div>

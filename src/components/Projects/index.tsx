@@ -52,7 +52,7 @@ export default function Projects() {
                 onClick={() => handlePageDown(page - 1)}
                 disabled={leftDisabled}
               >
-                <img src={ArrowDown} align="middle" alt="Arrow Left" />
+                <img src={ArrowDown} alt="Arrow Left" />
               </ControlButton>
 
               <ControlButton
@@ -60,7 +60,7 @@ export default function Projects() {
                 onClick={() => handlePageUp(page + 1)}
                 disabled={rightDisabled}
               >
-                <img src={ArrowDown} align="middle" alt="Arrow Right" />
+                <img src={ArrowDown} alt="Arrow Right" />
               </ControlButton>
             </div>
         </div>

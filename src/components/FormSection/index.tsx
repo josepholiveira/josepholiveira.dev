@@ -188,7 +188,6 @@ export default function FormSection() {
           <FormTextArea
             required
             name="message"
-            type="text"
             placeholder="Mensagem"
           />
 

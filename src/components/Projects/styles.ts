@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+interface ControlButtonProps {
+  left?: boolean;
+  right?: boolean;
+  disabled: boolean;
+}
+
 export const Content = styled.div`
   display: flex;
   margin-top: 260px;
@@ -164,7 +170,7 @@ export const Content = styled.div`
   }
 `;
 
-export const ControlButton = styled.div`
+export const ControlButton = styled.div<ControlButtonProps>`
   display: flex;
   justify-content: center;
   background: transparent;
