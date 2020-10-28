@@ -4,7 +4,8 @@ import { Carousel } from 'react-responsive-carousel';
 import { Content, ControlButton } from './styles';
 import ArrowDown from '../../assets/icons/arrow-down.svg';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import Placeholder from '../../assets/placeholder.png';
+
+import Image from 'next/image'
 
 export default function Projects() {
   const [page, setPage] = useState(0);
@@ -14,7 +15,7 @@ export default function Projects() {
       name: 'Nome do projeto',
       description:
         'Descrição breve do que é o projeto em no máximo três linhas de extenção para que fique visualmente harmonioso.',
-      url: Placeholder,
+      url: "/placeholder.png",
     },
   ];
 
@@ -77,7 +78,7 @@ export default function Projects() {
             {projects &&
               projects.map(({ name, url }) => (
                 <div>
-                  <img src={url} alt={name} />
+                  <Image unsized={true} src={url} alt={name} />
                 </div>
               ))}
           </Carousel>

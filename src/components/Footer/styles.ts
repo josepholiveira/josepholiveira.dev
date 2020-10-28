@@ -33,6 +33,7 @@ export const Content = styled.div`
 
   @media (max-width: 1440px) {
     margin-top: 150px;
+    
     #bottom-bubble {
       left: -380px;
       width: 1660px;
@@ -40,7 +41,7 @@ export const Content = styled.div`
   }
 
   @media (max-width: 450px) {
-    margin-top: 64px;
+    margin-top: 0px;
 
     #bottom-bubble {
       display: none;
