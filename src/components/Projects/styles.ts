@@ -22,6 +22,10 @@ export const Content = styled.div`
     flex: 1;
     margin-left: 96px;
 
+    .slide {
+        background: transparent !important;
+    }
+
     .dots {
       display: flex;
       justify-content: center;

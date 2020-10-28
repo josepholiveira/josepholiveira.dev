@@ -78,7 +78,7 @@ export default function Projects() {
             {projects &&
               projects.map(({ name, url }) => (
                 <div>
-                  <Image unsized={true} src={url} alt={name} />
+                  <Image width="640px" height="480px" src={url} alt={name} />
                 </div>
               ))}
           </Carousel>
