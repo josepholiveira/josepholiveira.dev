@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import Button from '../Button';
-import colors from '../../styles/themes/dark';
 
 export const Content = styled.div`
   display: flex;
@@ -68,7 +67,56 @@ export const Content = styled.div`
     align-self: flex-start;
   }
 
-  @media (max-width: 450px) {
+
+  @media (max-width: 1120px) {
+    padding: 0 24px;
+
+    .selfie {
+      flex: 1;
+    }
+    .socials {
+      display: none;
+    }
+  }
+
+  @media(max-width: 900px) {
+    display: flex;
+
+    flex-direction: column;
+    margin-top: 160px;
+    width: 100%;
+
+    #left-bubble {
+      display: none;
+    }
+
+    .about {
+      padding: 31px 0 0 0;
+
+      span {
+        color: ${props => props.theme.colors.primary};
+        font-size: 14px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+
+        &::before {
+          content: ' ';
+          width: 40px;
+          height: 2px;
+          background: #36364d;
+          display: block;
+          margin-right: 16px;
+        }
+      }
+
+      p {
+        width: 100%;
+      }
+    }
+  }
+  
+  @media (max-width: 500px) {
     display: flex;
     flex-direction: column;
     margin-top: 160px;

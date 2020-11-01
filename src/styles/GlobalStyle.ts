@@ -3,9 +3,9 @@ import { css, createGlobalStyle } from 'styled-components';
 import theme from './themes/dark';
 
 export const styles = css`
-  /* :root {
+  :root {
     font-size: 60%;
-  } */
+  }
 
   * {
     margin: 0;
@@ -54,11 +54,11 @@ export const styles = css`
     pointer-events: none;
   }
 
-  /* @media (min-width: 700px) {
+  @media (min-width: 700px) {
     :root {
       font-size: 62.5%;
     }
-  } */
+  }
 `;
 
 export default createGlobalStyle`${styles}`;

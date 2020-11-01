@@ -103,7 +103,42 @@ export const Content = styled.div`
     margin-top: 64px;
   }
 
-  @media (max-width: 450px) {
+
+
+  @media (max-width: 1120px) {
+    padding: 0px 24px;
+  }
+
+  @media (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    margin-top: 160px;
+    width: 100%;
+
+    .projects {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .previews {
+      margin-top: 48px;
+      margin-left: 0px;
+
+      .dots {
+        margin-left: 8px;
+      }
+    }
+
+    .controls {
+      display: none;
+    }
+  
+    .content {
+      padding: 31px 0 0 0;
+    }
+  }
+
+  @media (max-width: 500px) {
     display: flex;
     flex-direction: column;
     margin-top: 160px;

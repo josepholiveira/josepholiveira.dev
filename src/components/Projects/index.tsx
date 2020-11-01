@@ -77,15 +77,15 @@ export default function Projects() {
           >
             {projects &&
               projects.map(({ name, url }) => (
-                <div>
-                  <Image width="640px" height="480px" src={url} alt={name} />
+                <div key={name}>
+                  <Image unsized src={url} alt={name} />
                 </div>
               ))}
           </Carousel>
           <div className="dots">
             {projects &&
-              projects.map((_, index) => (
-                <span className={`dot ${page === index ? 'active' : ''}`} />
+              projects.map((project, index) => (
+                <span key={project.name} className={`dot ${page === index ? 'active' : ''}`} />
               ))}
           </div>
         </div>

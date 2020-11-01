@@ -40,7 +40,7 @@ export const Content = styled.div`
     }
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: 500px) {
     margin-top: 0px;
 
     #bottom-bubble {

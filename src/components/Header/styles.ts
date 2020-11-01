@@ -43,7 +43,7 @@ export const Container = styled.header`
     }
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: 1200px) {
     padding: 24px;
 
     aside {

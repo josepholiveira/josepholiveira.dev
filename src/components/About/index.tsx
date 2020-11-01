@@ -4,7 +4,6 @@ import { Content, SocialButton } from './styles';
 
 import Image from 'next/image'
 
-import SelfiePhoto from '../../assets/images/selfie.png';
 import Bubble from '../../assets/bubbles/bubble2.svg';
 import Github from '../../assets/icons/github.svg';
 import Linkedin from '../../assets/icons/in.svg';
@@ -13,7 +12,14 @@ export default function About() {
   return (
     <Content id="about">
       <img src={Bubble} alt="Left Bubble" id="left-bubble" />
-      <Image width="352px" height="451px" src="/selfie.png" className="selfie" alt="Joseph Oliveira" />
+      <Image 
+        width="352px" 
+        height="451px"
+        sizes="(max-width: 500px) 172px, 352px"
+        src="/selfie.png" 
+        className="selfie" 
+        alt="Joseph Oliveira"
+      />
 
       <div className="about">
         <span>Quem sou</span>

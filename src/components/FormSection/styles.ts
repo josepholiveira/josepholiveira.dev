@@ -28,8 +28,8 @@ export const Content = styled.div`
       margin-top: 40px;
       color: ${props => props.theme.colors.title};
       font-weight: 600;
-      font-size: 36px;
-      line-height: 46px;
+      font-size: 3.6rem;
+      line-height: 4.6rem;
     }
 
     p {
@@ -37,12 +37,12 @@ export const Content = styled.div`
       margin-top: 24px;
       color: ${props => props.theme.colors.texts};
       font-weight: 300;
-      font-size: 16px;
-      line-height: 30px;
+      font-size: 1.6rem;
+      line-height: 3rem;
     }
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: 1120px) {
     display: flex;
     flex-direction: column;
     margin-top: 160px;
@@ -82,7 +82,7 @@ export const FormContainer = styled.div`
   flex: 1;
   margin-left: 127px;
 
-  @media (max-width: 450px) {
+  @media (max-width: 1120px) {
     margin-top: 64px;
     margin-left: 0px !important;
   }
@@ -235,7 +235,7 @@ export const Form = styled.form`
     }
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: 700px) {
     padding: 24px;
 
     .number-pages-container {

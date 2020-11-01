@@ -13,21 +13,24 @@ export const Content = styled.div`
       font-family: Poppins;
       font-style: normal;
       font-weight: 600;
-      font-size: 54px;
-      line-height: 64px;
+      font-size: 5.4rem;
+      line-height: 6.4rem;
+      margin: 0 24px;
       height: 128px;
       color: ${props => props.theme.colors.title};
     }
 
     p {
       font-size: 16px;
-      line-height: 30px;
-      margin-top: 24px;
+      margin: 0 24px;
+      line-height: 3.0rem;
+      margin-top: 2.4rem;
       color: ${props => props.theme.colors.texts};
       font-weight: 300;
     }
 
     .button-container {
+      margin: 0 24px;
       margin-top: 64px;
       display: flex;
       align-items: center;
@@ -45,30 +48,81 @@ export const Content = styled.div`
     display: none;
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: 1200px) {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-top: 48px;
 
     .presentation {
       width: 100%;
 
       h1 {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-weight: 600;
+        font-size: 5.4rem;
+        line-height: 6.4rem;
+        height: auto;
+        color: ${props => props.theme.colors.title};
+      }
+
+      p {
+        font-size: 1.6rem;
+        line-height: 3.0rem;
+        margin-top: 10px;
+        color: ${props => props.theme.colors.texts};
+        font-weight: 300;
+      }
+
+      .button-container {
+        margin-top: 37px;
+      }
+    }
+
+
+    #top-bubble {
+      max-width: 600px;
+    }
+
+    .programmer {
+      max-width: 350px;
+      margin-right: 24px;
+    }
+  }
+
+  @media (max-width: 850px) {
+    flex-direction: column;
+
+    .programmer {
+      display: none;
+    }
+
+    #top-bubble {
+      display: none;
+    }
+  }
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+
+    .presentation {
+      h1 {
         margin: 0 24px;
         font-family: Poppins;
         font-style: normal;
         font-weight: 600;
         font-weight: 600;
-        font-size: 26px;
-        line-height: 38px;
-        height: 76px;
+        font-size: 3rem;
+        line-height: 4.2rem;
+        height: 7.6rem;
         color: ${props => props.theme.colors.title};
       }
 
       p {
         margin: 0 24px;
-        font-size: 15px;
-        line-height: 30px;
+        font-size: 1.5rem;
+        line-height: 3.0rem;
         margin-top: 10px;
         color: ${props => props.theme.colors.texts};
         font-weight: 300;
@@ -81,15 +135,13 @@ export const Content = styled.div`
       }
     }
 
-    #top-bubble {
-      display: none;
+    #mobile-bubble {
+      display: block;
+      width: 100%;
     }
 
-    #mobile-bubble {
-      margin-top: 55px;
-      display: block;
-      /* max-width: 450px; */
-      width: 100%;
+    #top-bubble {
+      display: none;
     }
 
     .programmer {
@@ -119,7 +171,7 @@ export const ProjectButton = styled.a`
     cursor: pointer;
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: 500px) {
     flex: 1;
     font-size: 15px;
     line-height: 16px;
@@ -169,7 +221,7 @@ export const ScrollButton = styled.a`
     }
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: 500px) {
     margin-left: 8px;
     font-size: 15px;
     line-height: 16px;
