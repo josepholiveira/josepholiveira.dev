@@ -9,7 +9,7 @@ import About from '../components/About';
 import Projects from '../components/Projects';
 import Form from '../components/FormSection';
 import Footer from '../components/Footer';
-import { NextPage } from 'next';
+import { GetStaticProps } from 'next';
 
 interface HomePageProps {
   projects: {
@@ -21,7 +21,7 @@ interface HomePageProps {
   }[]
 }
 
- const App: NextPage<HomePageProps> = ({ projects }) => {
+export default function Page ({ projects }: HomePageProps) {
   return (
     <Layout titlePrefix="Home">
       <Presentation />
@@ -33,7 +33,7 @@ interface HomePageProps {
   );
 }
 
-App.getInitialProps = async (ctx) => {
+export const getStaticProps: GetStaticProps = async (context) => {
   const endpoint = "https://api-us-west-2.graphcms.com/v2/ckjfsnc6q5rnk01wacuy69rvs/master";
   const query = gql`
     {
@@ -58,11 +58,12 @@ App.getInitialProps = async (ctx) => {
   const { projects } = await graphQLClient.request(query)
 
   return {
-    projects: projects.map(project => ({
-      ...project,
-      image_url: `https://media.graphcms.com/${project.image.handle}`
-    }))
+    props: {
+      projects: projects.map(project => ({
+        ...project,
+        image_url: `https://media.graphcms.com/${project.image.handle}`
+      })),
+    },
+    revalidate: 300
   }
 }
-
-export default App;

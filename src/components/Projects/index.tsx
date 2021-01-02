@@ -78,8 +78,8 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
           >
             {projects &&
               projects.map((project) => (
-                <a target="_blank" rel="noopener noreferrer" href={project.url}>
-                  <div className="project-image" key={project.title}>
+                <a key={project.title} target="_blank" rel="noopener noreferrer" href={project.url}>
+                  <div className="project-image" >
                       <Image width="640px" height="480px" src={project.image_url} alt={project.title} />
                   </div>
                 </a>
