@@ -5,19 +5,20 @@ import { Content, ControlButton } from './styles';
 import ArrowDown from '../../assets/icons/arrow-down.svg';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-import Image from 'next/image'
+import Image from 'next/image';
 
-export default function Projects() {
+interface ProjectsProps {
+  projects: {
+    id: string,
+    title: string,
+    description: string,
+    image_url: string,
+    url: string,
+  }[]
+}
+
+const Projects: React.FC<ProjectsProps> = ({ projects }) => {
   const [page, setPage] = useState(0);
-
-  const projects = [
-    {
-      name: 'Nome do projeto',
-      description:
-        'Descrição breve do que é o projeto em no máximo três linhas de extenção para que fique visualmente harmonioso.',
-      url: "/placeholder.png",
-    },
-  ];
 
   const pageSize = useMemo(() => projects.length, [projects]);
   const leftDisabled = useMemo(() => page === 0, [page]);
@@ -44,7 +45,7 @@ export default function Projects() {
       <div className="projects">
         <div className="content">
             <span>Projetos recentes</span>
-            <h2>{projects[page].name}</h2>
+            <h2>{projects[page].title}</h2>
             <p>{projects[page].description}</p>
 
             <div className="controls">
@@ -76,16 +77,16 @@ export default function Projects() {
             onChange={event => setPage(event)}
           >
             {projects &&
-              projects.map(({ name, url }) => (
-                <div key={name}>
-                  <Image unsized src={url} alt={name} />
+              projects.map((project) => (
+                <div className="project-image" key={project.title}>
+                  <Image width="640px" height="480px" src={project.image_url} alt={project.title} />
                 </div>
               ))}
           </Carousel>
           <div className="dots">
             {projects &&
               projects.map((project, index) => (
-                <span key={project.name} className={`dot ${page === index ? 'active' : ''}`} />
+                <span key={project.title} className={`dot ${page === index ? 'active' : ''}`} />
               ))}
           </div>
         </div>
@@ -93,3 +94,5 @@ export default function Projects() {
     </Content>
   );
 }
+
+export default Projects

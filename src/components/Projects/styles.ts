@@ -124,6 +124,12 @@ export const Content = styled.div`
       margin-top: 48px;
       margin-left: 0px;
 
+
+      .project-image {
+        width: 640px; 
+        height: 480px;
+      }
+
       .dots {
         margin-left: 8px;
       }
@@ -153,6 +159,11 @@ export const Content = styled.div`
     .previews {
       margin-top: 48px;
       margin-left: 0px;
+
+      .project-image {
+        width: 358px;
+        height: 269.05px;
+      }
 
       .dots {
         margin-left: 8px;

@@ -125,7 +125,7 @@ export const Content = styled.div`
 
     .selfie {
       align-self: flex-start;
-      width: 172.49px;
+      width: 172.48px;
       height: 221px;
     }
 
