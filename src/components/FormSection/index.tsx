@@ -24,7 +24,7 @@ export default function FormSection() {
     try {
       if (!!data['bot-field']) return
 
-      const response = await fetch('/api/send-email', {
+      await fetch('/api/send-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 

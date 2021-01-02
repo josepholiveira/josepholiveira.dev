@@ -78,9 +78,11 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
           >
             {projects &&
               projects.map((project) => (
-                <div className="project-image" key={project.title}>
-                  <Image width="640px" height="480px" src={project.image_url} alt={project.title} />
-                </div>
+                <a target="_blank" rel="noopener noreferrer" href={project.url}>
+                  <div className="project-image" key={project.title}>
+                      <Image width="640px" height="480px" src={project.image_url} alt={project.title} />
+                  </div>
+                </a>
               ))}
           </Carousel>
           <div className="dots">
