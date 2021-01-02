@@ -22,7 +22,7 @@ const sendEmail = async ({ name, email, layout, pagesNumber, message }) => {
         }
       ],
       from: {
-        email: 'naoresponda@josepholiveira.dev',
+        email: 'oi@josepholiveira.dev',
         name: '[Joseph Oliveira] Contato pelo site'
       },
       reply_to: {
