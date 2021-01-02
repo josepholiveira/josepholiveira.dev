@@ -1,9 +1,10 @@
 import styled from 'styled-components';
-import colors from '../../styles/themes/dark';
 
 export const Content = styled.div`
   display: flex;
   margin-top: 260px;
+
+  
 
   .formcontent {
     span {
@@ -299,6 +300,10 @@ export const SubmitButton = styled.button`
   font-size: 16px;
   line-height: 24px;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   margin-top: 40px;
   padding: 18px;
   transition: 0.3s ease;
@@ -323,4 +328,33 @@ export const SubmitButton = styled.button`
         background: transparent !important;
       }
     `}
+
+    .icon-spin {
+      -webkit-animation: icon-spin 2s infinite linear;
+              animation: icon-spin 2s infinite linear;
+
+      margin-right: 5px;
+    }
+
+    @-webkit-keyframes icon-spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(359deg);
+                transform: rotate(359deg);
+      }
+    }
+
+    @keyframes icon-spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(359deg);
+                transform: rotate(359deg);
+      }
+    }
 `;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
   Content,
@@ -9,7 +9,42 @@ import {
   SubmitButton,
 } from './styles';
 
+import { FiLoader } from 'react-icons/fi';
+
+import { useForm } from "react-hook-form";
+
 export default function FormSection() {
+  const [loading, setLoading] = useState(false);
+
+  const { register, handleSubmit, reset } = useForm();
+
+  async function onSubmit(data)  {
+    setLoading(true);
+
+    try {
+      if (!!data['bot-field']) return
+
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          name: data.name,
+          email: data.email,
+          layout: data.layout,
+          pagesNumber: data.pagesnumber,
+          message: data.message
+        })
+      })
+
+      alert('E-mail enviado com sucesso, entrarei em contato em breve! :)')
+      reset()
+      setLoading(false);
+    } catch(err) {
+      setLoading(false);
+      alert('Ocorreu um erro ao enviar o e-mail, tente novamente mais tarde.')
+    }
+  };
+
   return (
     <Content id="contact">
       <div className="formcontent">
@@ -26,20 +61,17 @@ export default function FormSection() {
       <FormContainer>
         <Form
           name="contact"
-          method="post"
-          data-netlify
-          data-netlify-honeypot="bot-field"
+          onSubmit={handleSubmit(onSubmit)}
         >
-          <input type="hidden" name="bot-field" />
-          <input type="hidden" name="form-name" value="contact" />
-          <FormInput name="name" type="text" required placeholder="Nome" />
+          <FormInput name="name" type="text" required placeholder="Nome" ref={register({ required: true })} />
           <FormInput
             required
             name="email"
             type="email"
             placeholder="E-mail"
+            ref={register({ required: true })}
           />
-          <input type="hidden" name="bot-field" />
+          <input type="hidden" name="bot-field" ref={register} />
 
           <p>Você já tem layout?</p>
 
@@ -52,6 +84,7 @@ export default function FormSection() {
                 name="layout"
                 value="possui"
                 required
+                ref={register({ required: true})}
               />
               <span className="design" />
               <span className="text">Sim</span>
@@ -65,6 +98,7 @@ export default function FormSection() {
                 name="layout"
                 value="naopossui"
                 required
+                ref={register({ required: true})}
               />
               <span className="design" />
               <span className="text">Não</span>
@@ -80,6 +114,7 @@ export default function FormSection() {
                 name="pagesnumber"
                 value="1"
                 required
+                ref={register({ required: true})}
               />
               <div className="page-number">1</div>
             </label>
@@ -90,6 +125,7 @@ export default function FormSection() {
                 name="pagesnumber"
                 value="2"
                 required
+                ref={register({ required: true})}
               />
               <div className="page-number">2</div>
             </label>
@@ -100,6 +136,7 @@ export default function FormSection() {
                 name="pagesnumber"
                 value="3"
                 required
+                ref={register({ required: true})}
               />
               <div className="page-number">3</div>
             </label>
@@ -110,6 +147,7 @@ export default function FormSection() {
                 name="pagesnumber"
                 value="4"
                 required
+                ref={register({ required: true})}
               />
               <div className="page-number">4</div>
             </label>
@@ -120,6 +158,7 @@ export default function FormSection() {
                 name="pagesnumber"
                 value="5"
                 required
+                ref={register({ required: true})}
               />
               <div className="page-number">5</div>
             </label>
@@ -130,6 +169,7 @@ export default function FormSection() {
                 name="pagesnumber"
                 value="6"
                 required
+                ref={register({ required: true})}
               />
               <div className="page-number">6</div>
             </label>
@@ -140,6 +180,7 @@ export default function FormSection() {
                 name="pagesnumber"
                 value="7+"
                 required
+                ref={register({ required: true})}
               />
               <div className="page-number">7+</div>
             </label>
@@ -150,6 +191,7 @@ export default function FormSection() {
                 name="pagesnumber"
                 value="7"
                 required
+                ref={register({ required: true})}
               />
               <div className="page-number">7</div>
             </label>
@@ -160,6 +202,7 @@ export default function FormSection() {
                 name="pagesnumber"
                 value="8"
                 required
+                ref={register({ required: true})}
               />
               <div className="page-number">8</div>
             </label>
@@ -170,6 +213,7 @@ export default function FormSection() {
                 name="pagesnumber"
                 value="9"
                 required
+                ref={register({ required: true})}
               />
               <div className="page-number">9</div>
             </label>
@@ -180,6 +224,7 @@ export default function FormSection() {
                 name="pagesnumber"
                 value="10+"
                 required
+                ref={register({ required: true})}
               />
               <div className="page-number">10+</div>
             </label>
@@ -189,9 +234,12 @@ export default function FormSection() {
             required
             name="message"
             placeholder="Mensagem"
+            ref={register({ required: true})}
           />
 
-          <SubmitButton type="submit">Enviar mensagem</SubmitButton>
+          <SubmitButton type="submit" disabled={loading}>
+            {loading && <FiLoader className="icon-spin" size={16} />} Enviar mensagem
+          </SubmitButton>
         </Form>
       </FormContainer>
     </Content>

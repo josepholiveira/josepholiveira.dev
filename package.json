@@ -8,8 +8,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "@unform/core": "^2.1.3",
-    "@unform/web": "^2.1.3",
     "graphql": "^15.4.0",
     "graphql-request": "^3.4.0",
     "next": "^10.0.4",
@@ -17,6 +15,8 @@
     "polished": "^4.0.3",
     "react": "16.14.0",
     "react-dom": "16.14.0",
+    "react-hook-form": "^6.14.0",
+    "react-icons": "^4.1.0",
     "react-responsive-carousel": "^3.2.10",
     "styled-components": "^5.2.0"
   },

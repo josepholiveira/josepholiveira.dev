@@ -22,7 +22,6 @@ interface HomePageProps {
 }
 
  const App: NextPage<HomePageProps> = ({ projects }) => {
-   console.log(projects)
   return (
     <Layout titlePrefix="Home">
       <Presentation />
