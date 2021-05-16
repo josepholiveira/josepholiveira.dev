@@ -34,7 +34,8 @@ export default function Page ({ projects }: HomePageProps) {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const endpoint = "https://api-us-west-2.graphcms.com/v2/ckjfsnc6q5rnk01wacuy69rvs/master";
+  const endpoint = process.env.GRAPHCMS_ENDPOINT;
+  
   const query = gql`
     {
       projects {
