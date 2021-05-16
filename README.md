@@ -1,30 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+  <img src=".github/logo.png" alt="josepholiveira.dev logo">
+</div>
 
-## Getting Started
+## josepholiveira.dev
 
-First, run the development server:
+[![Author](https://img.shields.io/badge/author-josepholiveira-4545e5?style=flat-square)](https://github.com/josepholiveira)
+[![Languages](https://img.shields.io/github/languages/count/josepholiveira/josepholiveira.dev?color=%234545e5&style=flat-square)](#)
+[![Stars](https://img.shields.io/github/stars/josepholiveira/josepholiveira.dev?color=4545e5&style=flat-square)](https://github.com/josepholiveira/josepholiveira.dev/stargazers)
+
+![Portfolio Preview](.github/app-preview.png)
+
+## Tecnologies
+
+<div align="center">
+  <br />
+  <img src=".github/tech-logos.png" alt="Technologies used">
+</div>
+
+This project was developed using cutting edge front-end technologies.
+
+
+- [ReactJS](https://reactjs.org/)
+- [Next.js](https://nextjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Styled Components](https://styled-components.com/)
+
+... And many others
+
+## 💻 Getting started
+
+### Requirements
+
+- You need to install both [Node.js](https://nodejs.org/en/download/) and [Yarn](https://yarnpkg.com/) to run this project.
+
+**Clone the project and access the folder**
 
 ```bash
-npm run dev
-# or
-yarn dev
+$ git clone https://github.com/josepholiveira/josepholiveira.dev.git && cd josepholiveira.dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Follow the steps below**
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+First, you'll need to configure your `.env`, you can follow the `env.example` to know the needed variables.
 
-## Learn More
+```bash
+# Install the dependencies
+$ yarn
 
-To learn more about Next.js, take a look at the following resources:
+# Run the web server
+$ yarn dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The app will be available for access on your browser at `http://localhost:3000`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 📝 License
 
-## Deploy on Vercel
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Made with 💜 by Joseph Oliveira 👋 [Check out my LinkedIn](https://www.linkedin.com/in/joseph-oliveira-294a19165)
