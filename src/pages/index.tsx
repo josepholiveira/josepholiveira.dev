@@ -63,6 +63,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
         image_url: `https://media.graphcms.com/${project.image.handle}`
       })),
     },
-    revalidate: 300
+    revalidate: 60 * 60 * 24 * 10 // 10 days
   }
 }
