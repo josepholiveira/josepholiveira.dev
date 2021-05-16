@@ -44,27 +44,27 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
     <Content id="projects">
       <div className="projects">
         <div className="content">
-            <span>Projetos recentes</span>
-            <h2>{projects[page].title}</h2>
-            <p>{projects[page].description}</p>
+          <span>Projetos recentes</span>
+          <h2>{projects[page].title}</h2>
+          <p>{projects[page].description}</p>
 
-            <div className="controls">
-              <ControlButton
-                left
-                onClick={() => handlePageDown(page - 1)}
-                disabled={leftDisabled}
-              >
-                <img src={ArrowDown} alt="Arrow Left" />
-              </ControlButton>
+          <div className="controls">
+            <ControlButton
+              left
+              onClick={() => handlePageDown(page - 1)}
+              disabled={leftDisabled}
+            >
+              <img src={ArrowDown} alt="Arrow Left" />
+            </ControlButton>
 
-              <ControlButton
-                right
-                onClick={() => handlePageUp(page + 1)}
-                disabled={rightDisabled}
-              >
-                <img src={ArrowDown} alt="Arrow Right" />
-              </ControlButton>
-            </div>
+            <ControlButton
+              right
+              onClick={() => handlePageUp(page + 1)}
+              disabled={rightDisabled}
+            >
+              <img src={ArrowDown} alt="Arrow Right" />
+            </ControlButton>
+          </div>
         </div>
         <div className="previews">
           <Carousel

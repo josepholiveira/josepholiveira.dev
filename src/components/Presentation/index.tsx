@@ -12,35 +12,35 @@ export default function Presentation() {
     <Content>
       <img src={Bubble} alt="Top Bubble" id="top-bubble" />
       <div className="presentation">
-          <h1>
-            Desenvolvo <br />
-            projetos incríveis.
-          </h1>
-          <p>
-            Aplicações fullstack para web e mobile <br /> desde o layout até o
-            código.
-          </p>
-          <img src={BubbleMobile} alt="Programmer" id="mobile-bubble" />
-          <div className="button-container">
-            <ProjectButton
-              className="start-project"
-              rel="noopener noreferrer"
-              aria-label="Iniciar projeto"
-              href="/#contact"
-            >
-              Iniciar um projeto
-            </ProjectButton>
-            <ScrollButton
-              className="scroll"
-              rel="noopener noreferrer"
-              aria-label="Scrolldown"
-              href="/#about"
-            >
-              <img src={ArrowDown} alt="Arrow Down" />
-            </ScrollButton>
-          </div>
+        <h1>
+          Desenvolvo <br />
+          projetos incríveis.
+        </h1>
+        <p>
+          Aplicações fullstack para web e mobile <br /> desde o layout até o
+          código.
+        </p>
+        <img src={BubbleMobile} alt="Programmer" id="mobile-bubble" />
+        <div className="button-container">
+          <ProjectButton
+            className="start-project"
+            rel="noopener noreferrer"
+            aria-label="Iniciar projeto"
+            href="/#contact"
+          >
+            Iniciar um projeto
+          </ProjectButton>
+          <ScrollButton
+            className="scroll"
+            rel="noopener noreferrer"
+            aria-label="Scrolldown"
+            href="/#about"
+          >
+            <img src={ArrowDown} alt="Arrow Down" />
+          </ScrollButton>
+        </div>
       </div>
-        <img src={logo} alt="Programmer" className="programmer" />
+      <img src={logo} alt="Programmer" className="programmer" />
 
     </Content>
   );
