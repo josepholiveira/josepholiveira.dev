@@ -16,6 +16,7 @@ export const styles = css`
   html {
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
