@@ -24,6 +24,7 @@ This project was developed using cutting edge front-end technologies.
 - [Next.js](https://nextjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Styled Components](https://styled-components.com/)
+- [GraphQL Request)[https://github.com/prisma-labs/graphql-request]
 
 ... And many others
 
