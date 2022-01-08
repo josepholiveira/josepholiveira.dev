@@ -12,16 +12,6 @@ export default function About() {
   return (
     <Content id="about">
       <img src={Bubble} alt="Left Bubble" id="left-bubble" />
-      <div className="selfie" >
-        <Image 
-          width="352px" 
-          height="452px"
-          src="/selfie.png"
-          alt="Joseph Oliveira"
-        />
-      </div> 
-      
-
       <div className="about">
         <span>Quem sou</span>
         <h2>
