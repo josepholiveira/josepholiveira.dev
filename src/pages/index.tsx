@@ -25,7 +25,7 @@ export default function Page ({ projects }: HomePageProps) {
   return (
     <Layout titlePrefix="Home">
       <Presentation />
-      <About />
+      {/* {/* <About /> */}
       <Projects projects={projects}/>
       <Form />
       <Footer />
